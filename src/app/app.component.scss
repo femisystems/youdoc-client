@@ -1,0 +1,11 @@
+.app-shell {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+main {
+  background: #efefef;
+  flex-grow: 1;
+}
