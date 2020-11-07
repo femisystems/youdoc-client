@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { SidePanelComponent, HeaderComponent } from 'src/app/components';
-
+import { HeaderComponent } from '@yd-modules/header';
+import { NavigationComponent } from '@yd-modules/navigation';
+import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: '', component: HeaderComponent, outlet: 'header' },
-  { path: '', component: SidePanelComponent, outlet: 'sidepanel' },
+  {
+    path: '',
+    component: AdminComponent,
+    children: [
+      { path: '', component: HeaderComponent, outlet: 'header' },
+      { path: '', component: NavigationComponent, outlet: 'navigation' },
+    ]
+  },
 ];
 
 @NgModule({
