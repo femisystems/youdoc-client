@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { DocumentListComponent, DocumentFormComponent, HeaderComponent, SidePanelComponent, DocumentViewComponent } from 'src/app/components';
+import { HeaderComponent } from '@yd-modules/header';
+import { NavigationComponent } from '@yd-modules/navigation';
+import { UserComponent } from './user.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
   {
-    path: 'documents',
+    path: '',
+    component: UserComponent,
     children: [
-      { path: '', component: DocumentListComponent },
-      { path: ':id', component: DocumentViewComponent },
-      { path: 'new', component: DocumentFormComponent },
+      { path: '', component: HeaderComponent, outlet: 'header' },
+      { path: '', component: NavigationComponent, outlet: 'navigation' },
     ]
   },
-  { path: '', component: HeaderComponent, outlet: 'header' },
-  { path: '', component: SidePanelComponent, outlet: 'sidepanel' },
 ];
 
 @NgModule({
