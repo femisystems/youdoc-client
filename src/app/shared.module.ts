@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DocumentFormComponent, HeaderComponent, SidePanelComponent } from './components';
+import { DocumentFormComponent, HeaderComponent, SearchComponent, SidePanelComponent } from './components';
 import { DocumentListComponent } from './components';
 import { DocumentViewComponent } from './components';
 
@@ -9,7 +9,8 @@ const sharedComponents = [
   SidePanelComponent,
   DocumentFormComponent,
   DocumentListComponent,
-  DocumentViewComponent
+  DocumentViewComponent,
+  SearchComponent
 ];
 
 @NgModule({
