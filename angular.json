@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "youdoc-client"
+    }
+  },
+  "defaultProject": "youdoc-client",
+  "cli": {
+    "analytics": "8a2e2749-a587-4c1f-b248-fd48dd976bd9"
+  }
 }
