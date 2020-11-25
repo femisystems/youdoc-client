@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://youdoc.herokuapp.com/",
+    "secure": true,
+    "pathRewrite": {
+      "^/api" : ""
+    },
+    "logLevel": "debug"
+  }
+}
